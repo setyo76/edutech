@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { GraduationCap, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
+import edutechLogo from '/public/edutech logo.png' // Vite / React supports this import
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -18,8 +19,8 @@ const Navbar = () => {
 
   const menuItems = [
     { name: 'Home', href: '#home' },
-    { name: 'Program', href: '#programs' },
     { name: 'Materi & Soal', href: '#materials' },
+    { name: 'Program', href: '#programs' },
     { name: 'Tentang Kami', href: '#about' },
     { name: 'Kontak', href: '#contact' },
   ]
@@ -47,15 +48,20 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
-          {/* Logo */}
+          {/* 🔹 Logo Section */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 rounded-full bg-blue-vivid flex items-center justify-center">
-              <GraduationCap className="text-white" size={24} />
-            </div>
+            <motion.img
+              src={edutechLogo}
+              alt="EduTech Logo"
+              className="w-10 h-10 object-contain"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.4 }}
+            />
             <span className="font-bold text-xl text-dark">EduTech</span>
           </Link>
 
-          {/* Desktop Menu */}
+          {/* 🔹 Desktop Menu */}
           <div className="hidden md:flex space-x-8">
             {menuItems.map((item) => (
               <a
@@ -72,7 +78,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* 🔹 Mobile Menu Button */}
           <button
             className="md:hidden text-slate-gray"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -82,7 +88,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* 🔹 Mobile Menu */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
