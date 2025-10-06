@@ -48,31 +48,29 @@ export const PROGRAMS: Program[] = [
     targetAudience: 'SD, SMP, SMA',
     whatsappText: 'Halo,%20saya%20tertarik%20dengan%20program%20Matematika'
   },
-  // 🔹 Tambahan baru: layanan untuk lembaga
   {
     id: 'school-training',
     title: 'Pelatihan untuk Sekolah',
-    description: 'Program kolaborasi untuk sekolah dalam bentuk pelatihan bagi guru maupun siswa secara klasikal di sekolah mitra.',
-    icon: 'Building2',
-    gradient: 'gradient-institution',
-    bgColor: 'bg-teal-100',
-    color: 'text-teal-600',
-    targetAudience: 'Sekolah Dasar, SMP, SMA/SMK',
-    whatsappText: 'Halo,%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20Pelatihan%20untuk%20Sekolah'
+    description: 'Program pelatihan khusus untuk sekolah dalam bidang robotika, coding, dan STEAM education',
+    icon: 'School',
+    gradient: 'gradient-primary',
+    bgColor: 'bg-blue-100',
+    color: 'text-blue-vivid',
+    targetAudience: 'Sekolah & Institusi',
+    whatsappText: 'Halo,%20saya%20tertarik%20dengan%20program%20Pelatihan%20untuk%20Sekolah'
   },
   {
     id: 'extracurricular',
     title: 'Pembina Ekstrakurikuler Robotic & Coding',
-    description: 'Layanan pendampingan rutin oleh mentor profesional untuk kegiatan ekstrakurikuler robotika dan coding di sekolah.',
-    icon: 'School',
-    gradient: 'gradient-collab',
-    bgColor: 'bg-cyan-100',
-    color: 'text-cyan-600',
-    targetAudience: 'Sekolah dengan Klub Robotika/Koding',
-    whatsappText: 'Halo,%20saya%20tertarik%20dengan%20Layanan%20Pembina%20Ekstrakurikuler%20Robotic%20dan%20Coding'
+    description: 'Pendampingan dan pelatihan pembina ekstrakurikuler robotika dan coding di sekolah',
+    icon: 'Users',
+    gradient: 'gradient-secondary',
+    bgColor: 'bg-purple-100',
+    color: 'text-purple-modern',
+    targetAudience: 'Guru & Pembina',
+    whatsappText: 'Halo,%20saya%20tertarik%20dengan%20program%20Pembina%20Ekstrakurikuler'
   }
 ]
-
 
 export const MATERIALS: Material[] = [
   {

@@ -9,7 +9,7 @@ const HeroSection = () => {
   // Bintang luar
   const stars = Array.from({ length: 12 }).map((_,) => {
     const baseSize = Math.random() * 6 + 4;
-    const sizeMultiplier = [1, 2, 3][Math.floor(Math.random() * 3)];
+    const sizeMultiplier = [1, 4, 12][Math.floor(Math.random() * 3)];
     return {
       x: Math.random() * 400 - 200,
       y: Math.random() * 400 - 200,
@@ -27,7 +27,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className='md:w-1/2 mb-10 md:mb-0'
+            className='md:w-1/2 mb-10 md:mb-0 md:pl-12'
           >
             <motion.h1 className='text-4xl md:text-5xl font-extrabold mb-4 pb-2 bg-gradient-to-r from-white via-orange to-yellow-500 bg-clip-text text-transparent animate-gradient'>
               Dari Nol Sampai Jago!

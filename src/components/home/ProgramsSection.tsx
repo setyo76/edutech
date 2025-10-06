@@ -22,13 +22,13 @@ const ProgramsSection = () => {
           </p>
         </motion.div>
 
-        {/* Grid Section with centered animation */}
+        {/* Grid Section with auto-fit for equal height */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-center place-items-center max-w-6xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl mx-auto"
         >
           {PROGRAMS.map((program, index) => (
             <motion.div
@@ -37,7 +37,7 @@ const ProgramsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="w-full flex justify-center"
+              className="flex"
             >
               <ProgramCard program={program} index={index} />
             </motion.div>
