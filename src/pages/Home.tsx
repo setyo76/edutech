@@ -7,6 +7,7 @@ import MaterialsSection from "@/components/home/ProgramsSection";
 import ProgramsSection from "@/components/home/MaterialsSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import AboutSection from "@/components/home/AboutSection";  
+import FAQSection from '@/components/home/FAQSection'
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
         <TestimonialsSection />
         <AboutSection />
         <ContactSection />
+        <FAQSection />
       </main>
       <Footer />
       <WhatsAppFloat />
